@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Patient</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Titre -->
+        <div class="text-center mb-4">
+            <h1>Espace Patient</h1>
+        </div>
+
+        <!-- Date actuelle -->
+        <div class="text-right mb-4">
+            <span class="date-container" id="currentDate"></span>
+        </div>
+
+        <!-- Section ECG -->
+        <div class="card">
+            <div class="card-header">
+                ECG Enregistré ou Temps Réel
+            </div>
+            <div class="card-body text-center">
+                <p>Affichage de l'ECG ici (contenu à venir).</p>
+            </div>
+        </div>
+
+        <!-- Diagnostic -->
+        <div class="card">
+            <div class="card-header">
+                Diagnostic
+            </div>
+            <div class="card-body">
+                <p>Le diagnostic généré indique :</p>
+                <div class="alert alert-danger critical-state" role="alert">
+                    ⚠️ État grave détecté : Arythmie cardiaque
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="card">
+            <div class="card-header">
+                Notifications
+            </div>
+            <div class="card-body notifications">
+                <ul class="list-group">
+                    <li class="list-group-item">Message reçu : Votre dernier diagnostic est disponible.</li>
+                    <li class="list-group-item">Message reçu : Mise à jour du système à venir.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bouton Déconnexion -->
+        <div class="text-center mt-4">
+            <a href="se_connecter.html" class="btn btn-outline-secondary">Déconnexion</a>
+        </div>
+    </div>
+
+    <!-- Script pour afficher la date actuelle -->
+    <script>
+        document.getElementById("currentDate").textContent = new Date().toLocaleDateString("fr-FR", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
